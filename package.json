@@ -1,0 +1,67 @@
+{
+  "name": "use-typesocket",
+  "version": "0.0.1",
+  "description": "React hook for WebSockets. (based on TypeSocket)",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "keywords": [
+    "websockets",
+    "library",
+    "typescript",
+    "react",
+    "typesocket"
+  ],
+  "scripts": {
+    "prepare": "npm run build",
+    "test": "jest",
+    "build": "tsc",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mat-sz/use-typesocket.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mat-sz/use-typesocket/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ],
+    "__tests__/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "homepage": "https://github.com/mat-sz/use-typesocket",
+  "author": "Mat Sz <contact@matsz.dev>",
+  "license": "BSD-3-Clause-Clear",
+  "private": false,
+  "devDependencies": {
+    "@testing-library/react-hooks": "^8.0.0",
+    "@types/jest": "^27.4.1",
+    "@types/react": "^18.0.5",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "eslint": "^8.13.0",
+    "husky": "^7.0.4",
+    "jest": "^27.5.1",
+    "lint-staged": "^10.0.9",
+    "prettier": "^2.0.2",
+    "react": "^18.0.0",
+    "react-test-renderer": "^18.0.0",
+    "ts-jest": "^27.1.4",
+    "typescript": "^4.6.3"
+  },
+  "peerDependencies": {
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0"
+  },
+  "dependencies": {
+    "typesocket": "^1.0.1"
+  }
+}
